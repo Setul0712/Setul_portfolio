@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [ '165.227.39.204', 'setulpatel.info', 'www.setulpatel.info']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
