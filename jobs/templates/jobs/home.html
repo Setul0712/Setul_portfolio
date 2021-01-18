@@ -25,9 +25,18 @@
 <link rel="icon" href="favicon.ico">
 <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
-
-
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+  
+
+
+  @media (min-width: 600px) {
+   
+  .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+  }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -37,11 +46,13 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    
+      .illustration img {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
     </style>
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
@@ -72,7 +83,11 @@
       <p>
         <a href="mailto:setulp7@gmail.com" class="btn btn-primary my-2">Email me</a>
       </p>
-      <img src = "{% static 'CBBB740E-2416-434E-9582-C4C008D1A87F_1_105_c.jpeg' %}" width ='700' height = '400'/>
+	<div class='section content'>
+  <div class='illustration'>
+      <img class='illustration' src = "{% static 'CBBB740E-2416-434E-9582-C4C008D1A87F_1_105_c.jpeg' %}" style='max-width: 700px'/>
+	</div>
+	</div>
     </div>
   </section>
   <br/>

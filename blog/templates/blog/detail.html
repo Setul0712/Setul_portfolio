@@ -36,7 +36,18 @@
         -ms-user-select: none;
         user-select: none;
       }
-
+	 .illustration img {
+  margin-left: 10%;
+  height : 600px;
+  width: 450px;
+  display: block;
+  }
+.column {
+  margin-left: 10%;
+  float: left;
+  width: 50%;
+  
+}
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -70,15 +81,17 @@
         <br/>
             <a href ="{%url 'detail' blog.id%}"><h2><p class ="text-center"> {{blog.title}}</p></h2></a> 
             
-             <p class ="text-center">{{blog.pub_date_done}}</p>   
-            
-            <div>
-                <img class= "img-fluid" align ="center" src = "{{ blog.image.url }}" float = "center" />
+             <p class ="text-center">{{blog.pub_date}}</p>   
+            <br>
+           <div class="row">
+            <div class="illustration" class="column">
+                <img  src = "{{ blog.image.url }}" />
             </div>
             <br>
             <br>
-            <div width ="6">        
-                <p class="card-text">{{blog.body}}</p>
+            <div width ="6" class="column">        
+                <p class="card-text">{{blog.body | linebreaks}}</p>
+            </div>
             </div>
         </div>
     </div>
