@@ -25,7 +25,7 @@ SECRET_KEY = 's!7)(y74_ni8zin2@$3o%lac3)$#qey@_l85h5sbc+l+u(1apc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [165.227.39.204, 'setulpatel.info', 'www.setulpatel.info']
 
 
 # Application definition
