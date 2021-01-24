@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.safestring import mark_safe
-
+def save(self, *args, **kwargs):
+    self.text_field = mark_safe(self.text_field.replace("\n", "<br/>"))
+    super(YourModel, self).save(*args, **kwargs)
 # Create your models here
 
 class blog(models.Model):
@@ -8,11 +10,7 @@ class blog(models.Model):
     pub_date = models.DateField(auto_now=False, auto_now_add=False)
     body = models.TextField()
     image = models.ImageField(upload_to = 'images/')
-
-
-def save(self, *args, **kwargs):
-    self.text_field = mark_safe(self.text_field.replace("\n", "<br/>"))
-    super(YourModel, self).save(*args, **kwargs)
+    link = models.URLField()
     def __str__(self):              #It will change blog name to the title of it in the database
         return self.title
 
@@ -21,5 +19,4 @@ def save(self, *args, **kwargs):
 
    # def summary(self):
    #     return self.body[:100]
-   
-   
+
